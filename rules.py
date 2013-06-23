@@ -56,6 +56,7 @@ def gen_re_list(im):
 
 
 def gen_re(im_rule):
+    # TODO Some explanation here
     if "open" in im_rule:
         if im_rule["open"] == False:
             reg = r"" + \
