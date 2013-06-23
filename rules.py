@@ -1,6 +1,21 @@
 import re
 from common import *
 
+tone_affinities = {
+    "a": "àáảãạ",
+    "ă": "ằắẳẵặ",
+    "â": "ầấẩẫậ",
+    "e": "èéẻẽẹ",
+    "ê": "ềếểễệ",
+    "i": "ìíỉĩị",
+    "o": "òóỏõọ",
+    "ô": "ồốổỗộ",
+    "ơ": "ờớởỡợ",
+    "u": "ùúủũụ",
+    "ư": "ừứửữự",
+    "y": "ỳýỷỹỵ"
+}
+
 
 def gen_tone_addition_rules(tone_mod_keys):
     rules = []
@@ -11,7 +26,7 @@ def gen_tone_addition_rules(tone_mod_keys):
     for base in "aăâeêioôơuưy":
         for index, tone_mod in enumerate(tone_mod_keys):
             tmp_rules.append({
-                "result": tone_map[base][index],
+                "result": tone_affinities[base][index],
                 "base": base,
                 "mod": tone_mod
             })
