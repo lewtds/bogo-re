@@ -1,8 +1,8 @@
-# BoGo engine backed by Regular Expression
+# BoGo meets Regular Expression
 
-This is one of my experiments with the [BoGo][1] project. The engine uses
-Regular Expressions solely as its logic. Side-effects and states are kept to the
-minimum.
+This is one of my experiments with the [BoGo][1] project. Basically, this is
+a Vietnamese input method engine. The engine uses Regular Expressions solely
+as its logic. Side-effects and states are kept to the minimum.
 
 Its API is fairly simple:
 
@@ -27,4 +27,5 @@ expression. After that it's cool.
 ## License
 
 **GPL v3** all the way down!
-Copyright 2013 Trung Ngo, though.
+
+*Copyright 2013 Trung Ngo, though.*
