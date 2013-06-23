@@ -19,5 +19,8 @@ for pair in pairs:
 		wrong_count += 1
 		print(pair, result)
 
-print("Total running time: " + str(time.time() - old_time))
+running_time = time.time() - old_time
+
 print("Number of wrong entries: " + str(wrong_count) + "/" + str(TEST_SIZE))
+print("Speed: " + str(TEST_SIZE / running_time) + "tests/second")
+print("Test time: " + str(running_time))
