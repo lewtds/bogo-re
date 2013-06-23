@@ -9,18 +9,18 @@ def test_gen_re():
 
 
 def test_gen_re_list():
-	im = {
-		"tone_addition": [
-	    {"result": "á", "base": "a", "mod": "s"},
-	    {"result": "ươ", "base": "uo", "mod": "w"}
-	]}
+    im = {
+        "tone_addition": [
+        {"result": "á", "base": "a", "mod": "s"},
+        {"result": "ươ", "base": "uo", "mod": "w"}
+    ]}
 
-	good_re_list = {
-		"tone_addition": [
-	    [re.compile(r"^a([^s]*)s(.*)"), "á"],
-	    [re.compile(r"^uo([^w]*)w(.*)"), "ươ"]
-	]}
+    good_re_list = {
+        "tone_addition": [
+        [re.compile(r"^a([^s]*)s(.*)"), "á"],
+        [re.compile(r"^uo([^w]*)w(.*)"), "ươ"]
+    ]}
 
 
-	re_list = gen_re_list(im)
-	eq_(re_list, good_re_list)
+    re_list = gen_re_list(im)
+    eq_(re_list, good_re_list)
