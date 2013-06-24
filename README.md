@@ -15,7 +15,7 @@ would be troublesome. I suggest you do the splitting part yourself (with
 `str.split()` perhaps?).
 
 You might want to read the tests first. Then run the benchmark
-(I got 250 words/second).
+(I got around 2300 words/second :3).
 
 Please note that it takes around 0.3s to initialize and compile the regular
 expression. After that it's cool.
