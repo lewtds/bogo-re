@@ -1,7 +1,7 @@
 import bogo
 
 seq_file = open("output.sequences", "r")
-TEST_SIZE = 1000
+TEST_SIZE = 30000
 
 pairs = []
 for i in range(TEST_SIZE):
@@ -21,6 +21,6 @@ for pair in pairs:
 
 running_time = time.time() - old_time
 
-print("Number of wrong entries: " + str(wrong_count) + "/" + str(TEST_SIZE))
-print("Speed: " + str(TEST_SIZE / running_time) + "tests/second")
+print("Wrong entries: " + str(wrong_count) + "/" + str(TEST_SIZE))
+print("Speed: {:.2f} tests/second".format(TEST_SIZE / running_time))
 print("Test time: " + str(running_time))
