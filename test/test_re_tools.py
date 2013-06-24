@@ -4,8 +4,8 @@ import re
 
 
 def test_gen_re():
-    eq_(gen_re({"base": "a", "mod": "s"}), re.compile(r"^a([^s]*)s(.*)"))
-    eq_(gen_re({"base": "uo", "mod": "w"}), re.compile(r"^uo([^w]*)w(.*)"))
+    eq_(gen_re({"base": "a", "mod": "s"}), {"base": "a", "mod": "s", "regexp": re.compile(r"^a([^s]*)s(.*)")})
+    eq_(gen_re({"base": "uo", "mod": "w"}), {"base": "uo", "mod": "w", "regexp": re.compile(r"^uo([^w]*)w(.*)")})
 
 
 def test_gen_re_list():
@@ -17,8 +17,8 @@ def test_gen_re_list():
 
     good_re_list = {
         "tone_addition": [
-        [re.compile(r"^a([^s]*)s(.*)"), "á"],
-        [re.compile(r"^uo([^w]*)w(.*)"), "ươ"]
+        {"result": "á", "base": "a", "mod": "s", "regexp": re.compile(r"^a([^s]*)s(.*)")},
+        {"result": "ươ", "base": "uo", "mod": "w", "regexp": re.compile(r"^uo([^w]*)w(.*)")}
     ]}
 
 
