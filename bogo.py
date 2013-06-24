@@ -56,7 +56,7 @@ def process_word(word):
             head, tail = word[:k], word[k:]
             for rule in rule_set:
                 # This line makes it FASSSTEEERRRR!!!
-                if word.find(rule["base"]) != -1:
+                if word.find(rule["base"]) != -1 and word.find(rule["mod"]) != -1:
                     new_string = rule["regexp"].sub(rule["result"] + r"\1\2", tail)
                     if new_string != tail:
                         tail = new_string
