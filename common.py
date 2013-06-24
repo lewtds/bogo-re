@@ -60,24 +60,3 @@ CLOSED_VOWELS = (
 )
 
 CONSONANTS = "bcdghklmnprstvxđ"
-
-
-def query(object_list, constrains):
-    """
-    Query a list of objects for the objects that have their keys matching
-    what's required in constrains, which is a dictionary. Similar to SQL's
-    SELECT statement.
-    """
-    objs = []
-    for obj in object_list:
-        match = True
-        try:
-            for key in constrains.keys():
-                if obj[key] != constrains[key]:
-                    match = False
-                    break
-            if match == True:
-                objs.append(obj)
-        except IndexError:
-            pass
-    return objs
